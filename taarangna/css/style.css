@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+}
+
+.containerbox {
+  background-image: url("../images/back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 105vh;
+  background-color: #000000;
+/*  animation: colorchange 5s linear infinite 0s;
+  animation-timing-function: ease-in-out;*/
+}
+
+/*@keyframes colorchange {
+  0% {
+    background-color: #000000;
+  }
+
+  100% {
+    background-color: #03071e;
+  }
+}*/
+
+.Bigheading {
+  margin: 0;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 300%;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2.5%;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  animation: moveinLeft 2s ease-in-out;
+}
+@keyframes moveinLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80%{
+    transform: translateX(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.box {
+  width: 20rem;
+  height: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: moveup 2s ease-in-out;
+}
+@keyframes moveup {
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  80%{
+    transform: translateY(-20px);
+  }
+  100%{
+    opacity: 1
+    transform:translate(0);
+  }
+
+}
+
+.register {
+  text-align: center;
+  padding: 10%;
+}
+
+.userinput {
+  margin-bottom: 5%;
+  width: 15rem;
+  height: 2rem;
+  padding: 2%;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(to right,#ffd5cd,#efbbcf);
+  border-block-start:solid 3px #00009c;
+  animation: colorborder 5s linear infinite 0s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes colorborder {
+  0%{
+    border-block-start-color:#1b03a3;
+  }
+  50%{
+    border-block-start-color:#5633b3;
+  }
+  100%{
+    border-block-start-color:#7d5ac3;
+  }
+
+}
+::placeholder {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  font-weight:bold;
+}
+input[type=submit]{
+  margin-top:10%;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  font-weight:bold;
+  color:#696969;
+  height: 2.5rem;
+  transition: background 2s;
+  transition-timing-function: ease-in-out;
+}
+input[type=submit]:hover{
+  background: linear-gradient(to right,#0a1195,#fd7c6e);
+  color:#ffffff;
+  border-block-start:none;
+  animation: none;
+}
+@media screen and (max-width:768px){
+  .Bigheading{
+    margin-bottom:3%;
+    font-size: 280%;
+  }
+  .containerbox{
+    height:130vh;
+  }
+}
+@media screen and (max-width:280px){
+  .box{
+    width:100%;
+  }
+  .register{
+    padding: 5%;
+  }
+}
